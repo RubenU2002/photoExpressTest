@@ -1,0 +1,22 @@
+<div class="container">
+    <form [formGroup]="costForm" (ngSubmit)="calculateTotal()">
+      <div class="form-group">
+        <label for="numberOfStudents">Número de Estudiantes:</label>
+        <input type="number" formControlName="numberOfStudents" min="1" placeholder="Introduzca número de estudiantes">
+      </div>
+      <div class="form-group">
+        <label for="baseServiceCost">Precio Base del Servicio (USD):</label>
+        <input type="number" formControlName="baseServiceCost" placeholder="Precio base del servicio">
+      </div>
+      <div class="form-group">
+        <label for="capAndGown">Agregar Toga y Birrete (20 USD por estudiante):</label>
+        <input type="checkbox" formControlName="capAndGown">
+      </div>
+      <div class="form-actions">
+        <button type="submit">Calcular</button>
+      </div>
+    </form>
+  
+    <p>Costo Total: {{ totalCost }} USD</p>
+  </div>
+  

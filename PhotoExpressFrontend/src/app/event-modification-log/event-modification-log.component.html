@@ -1,0 +1,23 @@
+<div class="modification-history">
+  <h1>Historial de modificaciones del evento</h1>
+  @if (modificationsLog.length !== 0) {
+      <table class="events-table">
+          <thead>
+              <tr>
+                  <th>Fecha de modificación</th>
+                  <th>Detalles</th>
+              </tr>
+          </thead>
+          <tbody>
+              @for (modification of modificationsLog; track modification.modificationId) {                
+              <tr>
+                  <td>{{modification.modificationDate}}</td>
+                  <td><button class="details-button" (click)="cargarDetalles(modification.eventBefore,modification.eventAfter)">Ver detalles</button></td>
+              </tr>
+              }
+          </tbody>
+      </table>
+  }@else {
+      <h1>No existen modificaciones por el momento</h1>
+  }
+</div>

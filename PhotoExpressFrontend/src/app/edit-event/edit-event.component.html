@@ -1,0 +1,33 @@
+<div class="form-container">
+    <form [formGroup]="eventForm" (ngSubmit)="saveEvent()" class="event-form">
+        <div class="form-group">
+            <label for="institutionId">Institución:</label>
+            <select id="institutionId" formControlName="InstitutionId">
+                  @for (institution of higherInsitutions; track institution.institutionId) {
+                    <option [value]="institution.institutionId">
+                    {{institution.institutionName}}-{{institution.institutionAddress}}</option>
+                  }
+                </select> 
+        </div>
+        <div class="form-group">
+            <label for="numberOfStudents">Número de Estudiantes:</label>
+            <input id="numberOfStudents" type="number" min="1" formControlName="NumberOfStudents" placeholder="Número de Estudiantes">
+        </div>
+        <div class="form-group">
+            <label for="startTime">Fecha de Inicio:</label>
+            <input id="startTime" type="datetime-local" formControlName="StartTime">
+        </div>
+        <div class="form-group checkbox-group">
+          <label for="capAndGown">Capa y Birrete</label>
+          <input id="capAndGown" type="checkbox" formControlName="CapAndGown">
+        </div>
+        <div class="form-group">
+            <label for="serviceCost">Costo del Servicio:</label>
+            <input id="serviceCost" type="number" min="1" formControlName="ServiceCost" placeholder="Costo del Servicio">
+        </div>
+        <div class="form-actions">
+            <button type="submit">Guardar</button>
+            <button type="button" (click)="cancel()">Cancelar</button>
+        </div>
+    </form>
+</div>

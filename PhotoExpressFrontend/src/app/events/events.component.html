@@ -1,0 +1,46 @@
+<div class="events-container">
+      <app-event-form (eventAdded)="loadEvents()"></app-event-form>
+      <h1>Registro de eventos</h1> 
+      <div>
+        @if(events.length!==0){
+        <table class="events-table">
+          <thead>
+            <tr>
+              <th>Número de Estudiantes</th>
+              <th>Fecha de Evento</th>
+              <th>Precio de Evento</th>
+              <th>Capa y Birrete</th>
+              <th>Institución</th>
+              <th>Email de Institución</th>
+              <th>Acciones</th>
+              <th>Historial</th>
+            </tr>
+          </thead>
+          <tbody>
+            
+              @for (event of events; track event.eventId) {
+             <tr>
+                 <td>{{ event.numberOfStudents }}</td>
+                 <td>{{ dateService.formateDate(event.startTime.toString()) }}</td>
+                 <td>{{ event.serviceCost }}</td>
+                 <td>{{ event.capAndGown ? 'Sí' : 'No' }}</td>
+                 <td>{{ event.institution.institutionName }}</td>
+                 <td>{{ event.institution.institutionAddress }}</td>
+                 <td>
+                  <button class="edit-button" (click)="editEvent(event.eventId)">Editar</button>
+                  <span class="button-separator"></span>
+                  <button class="delete-button" (click)="confirmDelete(event.eventId)">Eliminar</button>
+                </td>
+                <td>
+                  <button class="mod-log-button" (click)="modificationLog(event.eventId)">Modificaciones</button>
+                </td>
+             </tr>
+            }
+          </tbody>
+        </table>
+      }
+      @else{
+        <h2 class="no-events-message">No existen eventos por el momento</h2>
+      }
+</div>
+  

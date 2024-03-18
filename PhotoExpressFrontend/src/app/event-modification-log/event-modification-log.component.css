@@ -1,0 +1,40 @@
+.modification-history {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+.modification-history h1 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.events-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.events-table th, .events-table td {
+    text-align: left;
+    padding: 12px;
+    border-bottom: 1px solid #ccc;
+}
+
+.events-table th {
+    background-color: #f4f4f4;
+}
+
+.details-button {
+    background-color: #4CAF50; /* Green */
+    color: white;
+    padding: 10px 20px;
+    margin: 0;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.details-button:hover {
+    background-color: #45a049;
+}

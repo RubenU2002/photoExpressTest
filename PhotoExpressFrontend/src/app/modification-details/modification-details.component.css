@@ -1,0 +1,26 @@
+.modification-details-container {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .modification-section {
+    margin-bottom: 20px;
+  }
+  
+  .modification-section h3 {
+    color: #555;
+  }
+  
+  .modification-details-title {
+    color: #333;
+  }
+  
+  .no-modification-message {
+    font-family: Arial, sans-serif;
+    color: #666;
+    text-align: center;
+  }
+  

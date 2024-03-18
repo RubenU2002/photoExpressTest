@@ -1,0 +1,89 @@
+.events-container {
+  margin: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fuente más moderna */
+}
+
+.new-event-button {
+  background-color: #4CAF50; /* Verde */
+  color: white;
+  padding: 10px 24px;
+  margin: 20px 0;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Transición suave para el color de fondo */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2); /* Sombra para el botón */
+}
+
+.new-event-button:hover {
+  background-color: #367c39; /* Un tono de verde más oscuro para el hover */
+}
+
+.events-table {
+  width: 100%;
+  border-collapse: collapse;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Sombra para la tabla */
+}
+
+.events-table th, .events-table td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: left;
+  transition: background-color 0.3s ease; /* Transición suave para el color de fondo */
+}
+
+.events-table th {
+  background-color: #4CAF50; /* Color de fondo para los encabezados de la tabla */
+  color: white; /* Texto blanco para los encabezados */
+}
+
+.events-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.events-table tr:hover {
+  background-color: #e2e2e2; /* Un tono gris claro para el hover */
+}
+
+.events-table td button {
+  background-color: #f44336; /* Rojo para los botones de acción */
+  color: white;
+  padding: 5px 10px;
+  margin-right: 4px;
+  border: none;
+border-radius: 3px;
+cursor: pointer;
+transition: all 0.2s ease-in-out; /* Transiciones suaves para todos los cambios de estado */
+}
+
+.events-table td button:hover {
+background-color: #d32f2f; 
+transform: scale(1.05); 
+}
+
+.events-table td button.edit-button {
+background-color: #ffc107;
+}
+
+.events-table td button.edit-button:hover {
+background-color: #e0a800; 
+}
+
+.events-table td button.mod-log-button {
+background-color: #9c27b0;
+}
+
+.events-table td button.mod-log-button:hover {
+background-color: #7b1fa2; 
+}
+.events-table td .button-separator {
+display: inline-block;
+width: 8px;
+}
+
+.no-events-message {
+text-align: center;
+color: #757575;
+margin-top: 20px;
+font-size: 1.2em;
+}

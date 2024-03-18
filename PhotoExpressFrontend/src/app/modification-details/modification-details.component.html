@@ -1,0 +1,25 @@
+@if(modificationDetail){
+  <div class="modification-details-container">
+      <h2 class="modification-details-title">Detalles de Modificación</h2>
+      <div class="modification-section">
+          <h3>Antes</h3>
+            <p><b>Número de Estudiantes</b> {{modificationDetail.before.numberOfStudents}}</p>
+            <p><b>Inicio</b>: {{modificationDetail.before.startTime}}</p>
+            <p><b>Costo del Servicio</b> {{modificationDetail.before.serviceCost}}</p>
+            <p><b>Toga y Birrete</b>: {{modificationDetail.before.capAndGown ? 'Sí' : 'No'}}</p>
+            <p><b>Nombre de la Institución</b>: {{modificationDetail.before.institution.institutionName}}</p>
+            <p><b>Dirección de la Institución</b>: {{modificationDetail.before.institution.institutionAddress}}</p>
+      </div>
+      <div class="modification-section">
+          <h3>Después</h3>
+            <p><b>Número de Estudiantes</b>: {{modificationDetail.after.numberOfStudents}}</p>
+            <p><b>Inicio</b>: {{modificationDetail.after.startTime}}</p>
+            <p><b>Costo del Servicio</b>: {{modificationDetail.after.serviceCost}}</p>
+            <p><b>Toga y Birrete</b>: {{modificationDetail.after.capAndGown ? 'Sí' : 'No'}}</p>
+            <p><b>Nombre de la Institución</b>: {{modificationDetail.after.institution.institutionName}}</p>
+            <p><b>Dirección de la Institución</b>: {{modificationDetail.after.institution.institutionAddress}}</p>
+      </div>
+  </div>
+}@else {
+  <h1 class="no-modification-message">No hay detalles de la modificación</h1>
+}

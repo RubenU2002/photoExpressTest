@@ -1,0 +1,100 @@
+.events-container {
+    margin: 0 auto;
+    width: 90%;
+    max-width: 600px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .new-event-button, .form-actions button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.2s;
+  }
+  
+  .new-event-button:hover, .form-actions button:hover {
+    background-color: #0056b3;
+  }
+  
+  .form-container {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-top: 20px;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .form-group input[type="text"],
+  .form-group input[type="number"],
+  .form-group input[type="datetime-local"],
+  .form-group select,
+  .form-group input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Asegura que padding no aumente el tamaño del input */
+  }
+  
+  .checkbox-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  
+  .checkbox-group label {
+    margin: 0;
+  }
+  
+  .checkbox-group input[type="checkbox"] {
+    margin-right: 5px;
+  }
+  
+  .form-actions {
+    text-align: right;
+    margin-top: 20px;
+  }
+  
+  .form-actions button[type="button"] {
+    background-color: #6c757d;
+  }
+  
+  /* Estilos para el select */
+  .form-group select {
+    cursor: pointer;
+    display: block;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    padding: 10px 8px;
+    line-height: 1.5;
+    border-radius: 4px;
+    background-color: white;
+    border: 1px solid #ccc;
+    appearance: none; /* Remueve la flecha predeterminada del navegador */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url('data:image/svg+xml;charset=US-ASCII,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2048 2048"><path fill="%23007bff" d="M2048 384v128H0V384h2048zm0 640V896H0v128h2048zm0 768v-128H0v128h2048z"/></svg>'); /* Flecha personalizada */
+    background-repeat: no-repeat, repeat;
+    background-position: right .7em top 50%, 0 0;
+    background-size: .65em auto, 100%;
+  }
+  
+  /* Estilos para mejorar el aspecto visual de inputs y select al enfocarse */
+  .form-group input[type="text"]:focus,
+  .form-group input[type="number"]:focus,
+  .form-group input[type="datetime-local"]:focus,
+  .form-group select:focus,
+  .form-group input[type="email"]:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+    outline: 0;
+  }
+  

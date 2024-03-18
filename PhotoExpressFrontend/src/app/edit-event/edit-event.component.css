@@ -1,0 +1,78 @@
+.new-event-button {
+    background-color: #4CAF50; /* Verde */
+    color: white;
+    padding: 10px 24px;
+    margin: 20px 0;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .new-event-button:hover {
+    background-color: #45a049;
+  }
+  .events-container {
+    margin: 0 auto;
+    width: 90%;
+    max-width: 600px;
+}
+
+.new-event-button {
+    margin-bottom: 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+.form-container {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="number"],
+.form-group input[type="date"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: center;
+}
+
+.checkbox-group input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+.form-actions {
+    text-align: right;
+}
+
+.form-actions button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.form-actions button[type="button"] {
+    background-color: #6c757d;
+}

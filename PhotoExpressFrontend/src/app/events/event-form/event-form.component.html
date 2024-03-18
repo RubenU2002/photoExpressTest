@@ -1,0 +1,53 @@
+<div class="events-container">
+  <button class="new-event-button" (click)="toggleForm()">Crear Nuevo Evento</button>
+  @if(showAlert){
+    <app-alert [message]="alertMsj" [type]="alertType"></app-alert>
+  }
+  @if (showForm) {
+    <div class="form-container">
+        <form [formGroup]="eventForm" (ngSubmit)="saveEvent()" class="event-form">
+            <div class="form-group">
+                <label for="institutionId">Institución:</label>
+                <select id="institutionId" 
+                (change)="toggleNewInsitutionForm()" formControlName="InstitutionId">
+                  <option [value]="0">Agregar nueva institución</option>
+                  @for (institution of higherInsitutions; track institution.institutionId) {
+                    <option [value]="institution.institutionId">
+                    {{institution.institutionName}}-{{institution.institutionAddress}}</option>
+                  }
+                </select> 
+            </div>
+            @if (showNewInsitutionForm) {
+              <div class="form-group">
+                <label for="institutionId">Nombre Institución:</label>
+                <input id="nstitutionName" type="text" formControlName="InstitutionName" placeholder="Nombre">
+              </div>
+              <div class="form-group">
+                <label for="institutionAddress">Correo Institución:</label>
+                <input id="institutionAddress" type="email" formControlName="InstitutionAddress" placeholder="correo@gmail.com">
+              </div>
+            }
+            <div class="form-group">
+                <label for="numberOfStudents">Número de Estudiantes:</label>
+                <input id="numberOfStudents" type="number" min="1" formControlName="NumberOfStudents" placeholder="Número de Estudiantes">
+            </div>
+            <div class="form-group">
+                <label for="startTime">Fecha de Inicio:</label>
+                <input id="startTime" type="datetime-local" formControlName="StartTime">
+            </div>
+            <div class="form-group checkbox-group">
+              <label for="capAndGown">Capa y Birrete</label>
+              <input id="capAndGown" type="checkbox" formControlName="CapAndGown">
+            </div>
+            <div class="form-group">
+                <label for="serviceCost">Costo del Servicio:</label>
+                <input id="serviceCost" type="number" min="1" value="200" formControlName="ServiceCost" placeholder="Costo del Servicio">
+            </div>
+            <div class="form-actions">
+                <button type="submit">Guardar</button>
+                <button type="button" (click)="toggleForm()">Cancelar</button>
+            </div>
+        </form>
+    </div>
+  }
+</div>
