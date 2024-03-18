@@ -1,6 +1,6 @@
 export const environment = {
     production: false,
-    apiUrl: 'https://localhost:7155/',
+    apiUrl: 'http://localhost:5062/',
     eventsEndpoint: 'events/',
     higherEducationInstitutionsEndpoint : 'HigherEducationInstitutions/',
     modificationLog: 'EventModifications/',

@@ -1,4 +1,5 @@
 using Infraestructure.DataAccess;
+using Microsoft.EntityFrameworkCore;
 using WebApi.Services.EventModification;
 using WebApi.Services.Events;
 using WebApi.Services.HigherEducationInstitutions;
@@ -12,7 +13,8 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-builder.Services.AddDbContext<photoExpressContext>();
+builder.Services.AddDbContext<photoExpressContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("photoExpressDB")));
 builder.Services.AddScoped<IHigherEducationInstitutionRepository, HigherEducationInstitutionRepository>();
 builder.Services.AddScoped<IEventsRepository, EventsRepository>();
 builder.Services.AddScoped<IEventModificationRepository, EventModificationRepository>();
