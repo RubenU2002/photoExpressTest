@@ -1,4 +1,5 @@
 --create database photoExpressDB
+use photoExpressDB
 CREATE TABLE HigherEducationInstitution (
     InstitutionID UNIQUEIDENTIFIER PRIMARY KEY DEFAULT NEWID(),
     InstitutionName NVARCHAR(255) NOT NULL,
@@ -25,13 +26,3 @@ CREATE TABLE EventModificationLog (
     EventAfter NVARCHAR(MAX),
     FOREIGN KEY (EventID) REFERENCES Event(EventID)
 );
-
-/*CREATE TABLE Notification (
-    NotificationID UNIQUEIDENTIFIER PRIMARY KEY DEFAULT NEWID(),
-    EventID UNIQUEIDENTIFIER,
-    RecipientEmail NVARCHAR(255) NOT NULL,
-    Message NVARCHAR(MAX) NOT NULL,
-    SendDate DATETIME NOT NULL,
-    FOREIGN KEY (EventID) REFERENCES Event(EventID)
-);
-*/

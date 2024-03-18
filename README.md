@@ -32,4 +32,5 @@ dotnet restore
 ## Uso
 - Navega a `http://localhost:4200/` en tu navegador para ver la interfaz de PhotoExpress.
 - La API backend es accesible en `http://localhost:5000/` o ruta dada por .Net al ejecutar "dotnet run".
-
+## Documentación tecnica
+1. La documentación tecnica se encontrará en la carpeta "Docs"
